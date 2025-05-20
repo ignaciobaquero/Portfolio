@@ -6,15 +6,18 @@
 
 html,
 body {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+
   background-color: #0a192f !important;
 }
+
 .main {
   flex: 1;
 }
-// Personaliza la navbar de Bootstrap, sin romper su estructura
+
 .navbar {
   border-bottom: 0.1px solid rgb(0, 0, 0);
   padding: 1% 10px;
@@ -80,7 +83,7 @@ body {
 }
 
 %boton {
-  padding: 1% 3%;
+  padding: 1% 2.5% !important;
   border-radius: 5%;
   background-color: blue;
   color: white;
@@ -96,6 +99,16 @@ body {
   @include zoom-card(1.1, 0.3s, #a80ce6fd);
 }
 .bottom-javascript {
+  padding: 1% 1% !important;
+  @extend %boton;
+  @include zoom-card(1.1, 0.3s, #a80ce6fd);
+}
+.bottom-bootstrap {
+  padding: 1% 1% !important;
+  @extend %boton;
+  @include zoom-card(1.1, 0.3s, #a80ce6fd);
+}
+.bottom-sass {
   @extend %boton;
   @include zoom-card(1.1, 0.3s, #a80ce6fd);
 }
@@ -139,6 +152,37 @@ body {
   font-size: 1.2rem;
 }
 
+.parrafo-sobremi {
+  color: whitesmoke !important;
+  font-family: sans-serif;
+  width: 100%;
+  @media (max-width: 576px) {
+    width: 100%;
+    height: 80vh;
+  }
+}
+
+.img-class {
+  width: 20%;
+
+  @media (max-width: 576px) {
+    width: 30%;
+    min-width: 120px;
+    padding-bottom: 4%;
+  }
+}
+.imagen-telefono {
+  width: 2%;
+  height: 2%;
+  @media (max-width: 576px) {
+    width: 4%;
+    height: 4%;
+  }
+}
+
+.p-color {
+  color: #7084c0;
+}
 /* $$$$$$ */
 
 $shadow: 0 10px 20px rgba(166, 255, 0, 0.25);
